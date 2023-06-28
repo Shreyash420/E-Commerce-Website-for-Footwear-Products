@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <style>.popup {
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      
+      .popup-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 30%;
+        text-align: center;
+      }
+      
+      .popup-content h2 {
+        color: green;
+      }
+      
+      #close-popup-btn {
+        background-color: green;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+      
+      #close-popup-btn:hover {
+        background-color: #fff;
+        color: green;
+        border: 1px solid green;
+      }
+      </style>
+    <title>Success</title>
+</head>
+<body>
+    <section id ="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close">  <i class="fa-solid fa-circle-xmark"></i></a>
+            </ul>
+        </div>
+
+        <div id="mobile">
+           <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+           <i id="bar" class="fa-solid fa-outdent"></i>
+        </div>
+     </section>
+    <div id="success-popup" class="popup">
+  <div class="popup-content">
+    <h2>Success!</h2>
+    <p>Your order has been placed succesfully.....</p>
+     <a href="./index.html"><button id="close-popup-btn">Shop More</button></a>
+  </div>
+</div>
+
+
+
+<script>
+    // Get the popup element
+var popup = document.getElementById("success-popup");
+
+// Get the button that closes the popup
+var closePopupBtn = document.getElementById("close-popup-btn");
+
+// When the user clicks the button, close the popup
+closePopupBtn.onclick = function() {
+  popup.style.display = "none";
+};
+
+// Show the popup
+popup.style.display = "block";
+
+</script>
+    
+</body>
+</html>
